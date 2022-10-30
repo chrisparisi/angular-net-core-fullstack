@@ -23,6 +23,7 @@ namespace API.Controllers
             _context = context;
         }
 
+        //register
         [HttpPost("Register")]
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto) 
         {
@@ -46,6 +47,7 @@ namespace API.Controllers
             };
         }
 
+        //login user
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
