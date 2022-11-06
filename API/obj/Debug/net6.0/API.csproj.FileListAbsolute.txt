@@ -66,3 +66,8 @@ C:\Users\thech\OneDrive\Desktop\AngularProjects\DatingApp\API\bin\Debug\net6.0\A
 C:\Users\thech\OneDrive\Desktop\AngularProjects\DatingApp\API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\thech\OneDrive\Desktop\AngularProjects\DatingApp\API\bin\Debug\net6.0\CloudinaryDotNet.dll
 C:\Users\thech\OneDrive\Desktop\AngularProjects\DatingApp\API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\thech\OneDrive\Desktop\AngularProjects\DatingApp\API\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\thech\OneDrive\Desktop\AngularProjects\DatingApp\API\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\thech\OneDrive\Desktop\AngularProjects\DatingApp\API\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\thech\OneDrive\Desktop\AngularProjects\DatingApp\API\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\thech\OneDrive\Desktop\AngularProjects\DatingApp\API\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
