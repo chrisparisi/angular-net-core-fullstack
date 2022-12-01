@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\API",
+    "\\API\\Entities"
   ],
   "PreviewInSolutionExplorer": false
 }
