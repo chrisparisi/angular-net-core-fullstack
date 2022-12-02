@@ -29,7 +29,7 @@
         </div>
         <div>
           <strong>Member Since:</strong>
-          <p>{{ member.created | date: "longDate" }}</p>
+          <p>{{ member.created | date : "longDate" }}</p>
         </div>
         <div class="card-footer">
           <div class="btn-group d-flex">
@@ -66,10 +66,7 @@
         ></ngx-gallery>
       </tab>
       <tab heading="Messages" (selectTab)="onTabActivated($event)">
-        <app-member-messages
-          [messages]="messages"
-          [username]="member.username"
-        ></app-member-messages>
+        <app-member-messages [username]="member.username"></app-member-messages>
       </tab>
     </tabset>
   </div>
