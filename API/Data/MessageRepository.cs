@@ -22,6 +22,11 @@ namespace API.Data
             _context = context;
         }
 
+        public void AddGroup(Group group)
+        {
+            throw new NotImplementedException();
+        }
+
         public void AddMessage(Message message)
         {
             _context.Messages.Add(message);
@@ -32,12 +37,22 @@ namespace API.Data
             _context.Messages.Remove(message);
         }
 
+        public Task<Connection> GetConnection(string connectionId)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<Message> GetMessage(int id)
         {
             return await _context.Messages
                 .Include(u => u.Sender)
                 .Include(u => u.Recipient)
                 .SingleOrDefaultAsync(x => x.Id == id);
+        }
+
+        public Task<Group> GetMessageGroup(string groupName)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<PagedList<MessageDto>> GetMessagesForUser(MessageParams messageParams)
@@ -86,6 +101,11 @@ namespace API.Data
             }
 
             return _mapper.Map<IEnumerable<MessageDto>>(messages);
+        }
+
+        public void RemoveConnection(Connection connection)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<bool> SaveAllAsync()
