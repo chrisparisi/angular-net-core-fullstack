@@ -37,9 +37,9 @@ namespace API.Data
             _context.Messages.Remove(message);
         }
 
-        public Task<Connection> GetConnection(string connectionId)
+        public async Task<Connection> GetConnection(string connectionId)
         {
-            throw new NotImplementedException();
+            return await _context.Connections.FindAsync(connectionId);
         }
 
         public async Task<Message> GetMessage(int id)
