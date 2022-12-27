@@ -107,7 +107,7 @@ namespace API.Data
 
         public void RemoveConnection(Connection connection)
         {
-            throw new NotImplementedException();
+            _context.Connections.Remove(connection);
         }
 
         public async Task<bool> SaveAllAsync()
