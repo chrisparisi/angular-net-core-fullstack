@@ -78,5 +78,10 @@ namespace API.SignalR
             var stringCompare = string.CompareOrdinal(caller, other) < 0;
             return stringCompare ? $"{caller}-{other}" : $"{other}-{caller}";
         }
+
+        private async Task<bool> AddToGroup(string groupName) 
+        {
+            var group = await _messageRepository.GetMessageGroup(groupName);
+        }
     }
 }
