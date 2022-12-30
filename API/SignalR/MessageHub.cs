@@ -82,6 +82,7 @@ namespace API.SignalR
         private async Task<bool> AddToGroup(string groupName) 
         {
             var group = await _messageRepository.GetMessageGroup(groupName);
+            var connection = new Connection(Context.ConnectionId, Context.User.GetUserName());
         }
     }
 }
