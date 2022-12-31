@@ -83,6 +83,12 @@ namespace API.SignalR
         {
             var group = await _messageRepository.GetMessageGroup(groupName);
             var connection = new Connection(Context.ConnectionId, Context.User.GetUserName());
+
+            if (group == null)
+            {
+                group = new Group(groupName);
+                _messageRepository.AddGroup(group);
+            }
         }
     }
 }
