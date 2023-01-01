@@ -91,6 +91,8 @@ namespace API.SignalR
             }
 
             group.Connections.Add(connection);
+
+            return await _messageRepository.SaveAllAsync();
         }
     }
 }
