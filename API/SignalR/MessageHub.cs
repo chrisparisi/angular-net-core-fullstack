@@ -89,6 +89,8 @@ namespace API.SignalR
                 group = new Group(groupName);
                 _messageRepository.AddGroup(group);
             }
+
+            group.Connections.Add(connection);
         }
     }
 }
