@@ -94,5 +94,10 @@ namespace API.SignalR
 
             return await _messageRepository.SaveAllAsync();
         }
+
+        private async Task RemoveFromMessageGroup()
+        {
+            var connection = await _messageRepository.GetConnection(Context.ConnectionId);
+        }
     }
 }
