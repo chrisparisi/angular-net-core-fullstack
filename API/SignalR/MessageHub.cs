@@ -99,6 +99,7 @@ namespace API.SignalR
         {
             var connection = await _messageRepository.GetConnection(Context.ConnectionId);
             _messageRepository.RemoveConnection(connection);
+            await _messageRepository.SaveAllAsync();
         }
     }
 }
