@@ -32,6 +32,7 @@ namespace API.SignalR
             var otherUser = httpContext.Request.Query["user"];
             var groupName = GetGroupName(Context.User.GetUserName(), otherUser);
             await Groups.AddToGroupAsync(Context.ConnectionId, groupName);
+            await AddToGroup(groupName);
 
             var messages = await _messageRepository.GetMessageThred(Context.User.GetUserName(), otherUser);
 
