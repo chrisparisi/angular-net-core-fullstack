@@ -39,9 +39,10 @@ namespace API.SignalR
             await Clients.Group(groupName).SendAsync("ReceiveMessageThread", messages);
         }
 
-        public override Task OnDisconnectedAsync(Exception exception)
+        public override async Task OnDisconnectedAsync(Exception exception)
         {
-            return base.OnDisconnectedAsync(exception);
+            await RemoveFromMessageGroup();
+            await base.OnDisconnectedAsync(exception);
         }
 
         public async Task SendMessage(CreateMessageDto createMessageDto)
