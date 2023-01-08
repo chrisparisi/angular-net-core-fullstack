@@ -66,6 +66,8 @@ namespace API.SignalR
                 Content = createMessageDto.Content
             };
 
+            var groupName = GetGroupName(sender.UserName, recipient.UserName);
+
             _messageRepository.AddMessage(message);
 
             if (await _messageRepository.SaveAllAsync())
