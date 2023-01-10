@@ -70,6 +70,11 @@ namespace API.SignalR
 
             var group = await _messageRepository.GetMessageGroup(groupName);
 
+            if (group.Connections.Any(x => x.Username == recipient.UserName))
+            {
+                message.DateRead = DateTime.UtcNow;
+            }
+
             _messageRepository.AddMessage(message);
 
             if (await _messageRepository.SaveAllAsync())
