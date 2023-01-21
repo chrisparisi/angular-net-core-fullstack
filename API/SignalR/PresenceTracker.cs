@@ -62,6 +62,8 @@ namespace API.SignalR
             {
                 connectionIds = OnlineUsers.GetValueOrDefault(username);
             }
+
+            return Task.FromResult(connectionIds);
         }
     }
 }
