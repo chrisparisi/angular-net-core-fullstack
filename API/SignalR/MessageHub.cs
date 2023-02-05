@@ -18,8 +18,10 @@ namespace API.SignalR
         private readonly IMessageRepository _messageRepository;
         private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
-        public MessageHub(IMessageRepository messageRepository, IUserRepository userRepository, IMapper mapper)
+        private IHubContext<PresenceHub> _presenceHub;
+        public MessageHub(IMessageRepository messageRepository, IUserRepository userRepository, IMapper mapper, IHubContext<PresenceHub> presenceHub)
         {
+            _presenceHub = presenceHub;
             _mapper = mapper;
             _userRepository = userRepository;
             _messageRepository = messageRepository;
