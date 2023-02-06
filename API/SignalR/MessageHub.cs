@@ -76,6 +76,13 @@ namespace API.SignalR
             {
                 message.DateRead = DateTime.UtcNow;
             }
+            else 
+            {
+                var connections = await PresenceTracker.GetConnectionsForUser(recipient.UserName);
+                if (connections != null) {
+                    
+                }
+            }
 
             _messageRepository.AddMessage(message);
 
